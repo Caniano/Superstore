@@ -40,7 +40,7 @@ if fl is not None:
         st.stop()
 
 else:
-    default_path = "/Users/kanishksingh/Desktop/Project_Dashboard/SampleSuperstore.xlsx"
+    default_path = "SampleSuperstore.xlsx"
     if os.path.exists(default_path):
         try:
             df = pd.read_excel(default_path)
