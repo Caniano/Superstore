@@ -40,13 +40,13 @@ if fl is not None:
         st.stop()
 
 else:
-    default_path = "/Users/kanishksingh/Desktop/Project_Dashboard/Superstore.csv"
+    default_path = "/Users/kanishksingh/Desktop/Project_Dashboard/SampleSuperstore.xlsx"
     if os.path.exists(default_path):
         try:
-            df = pd.read_csv(default_path, encoding="ISO-8859-1")
-            st.info("Using default local file (Superstore.csv)")
+            df = pd.read_excel(default_path)
+            st.info("✅ Using default Excel file: SampleSuperstore.xlsx")
         except Exception as e:
-            st.error(f"❌ Error reading default file: {e}")
+            st.error(f"❌ Error reading default Excel file: {e}")
             st.stop()
     else:
         st.warning("⚠️ No file uploaded and default file not found. Please upload a data file.")
